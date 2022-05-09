@@ -2,6 +2,7 @@ import React from "react"
 import Die from "./Die"
 import {nanoid} from "nanoid"
 import Confetti from "react-confetti"
+<<<<<<< HEAD
 ////////
 export default function App() {
 
@@ -13,6 +14,19 @@ export default function App() {
     
     const [minScore, setMinScore]=React.useState(JSON.parse(localStorage.getItem('minScore')));
 
+=======
+
+export default function App() {
+
+    const [dice, setDice] = React.useState(allNewDice())
+    const [tenzies, setTenzies] = React.useState(false)
+    const [countTries, setCountTries] = React.useState(1)
+    
+    const [bingo, setBingo] = React.useState(false)
+    
+    const [minScore, setMinScore]=React.useState(JSON.parse(localStorage.getItem('minScore')));
+
+>>>>>>> 2e3178e095013a6394d92210a5ee846e19ba98ac
 
     React.useEffect(() => {
     
