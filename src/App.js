@@ -94,7 +94,7 @@ export default function App() {
             {tenzies && <Confetti />}
             {tenzies? <h1 className="title">Congratz! You won!</h1>:<h1 className="title">Tenzies</h1>}
             {bingo?<div>THIS IS THE BEST SCORE SO FAR!</div>:tenzies ? <p className="instructions">Click "New Game" to start over</p>:<p className="instructions">Roll until all dice are the same. 
-            Click each die to freeze it at its current value between rolls. Best score so far is {minScore}.</p>}           
+            Click each die to freeze it at its current value between rolls. </p>}           
             <div className="dice-container">
                 {diceElements}
             </div>
