@@ -3,10 +3,6 @@ import Die from "./Die"
 import {nanoid} from "nanoid"
 import Confetti from "react-confetti"
 
-
-
-
-
 export default function App() {
 
     const [dice, setDice] = React.useState(allNewDice())
@@ -19,8 +15,6 @@ export default function App() {
     }
     
     const [minScore, setMinScore]=React.useState(JSON.parse(localStorage.getItem('minScore')));
-
-
 
     React.useEffect(() => {
     
