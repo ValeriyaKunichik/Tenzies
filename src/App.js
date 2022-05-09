@@ -14,6 +14,9 @@ export default function App() {
     const [countTries, setCountTries] = React.useState(1)
     
     const [bingo, setBingo] = React.useState(false)
+    if(!localStorage.getItem('minScore')){     
+             localStorage.setItem('minScore', JSON.stringify(100)) 
+    }
     
     const [minScore, setMinScore]=React.useState(JSON.parse(localStorage.getItem('minScore')));
 
@@ -94,7 +97,7 @@ export default function App() {
             {tenzies && <Confetti />}
             {tenzies? <h1 className="title">Congratz! You won!</h1>:<h1 className="title">Tenzies</h1>}
             {bingo?<div>THIS IS THE BEST SCORE SO FAR!</div>:tenzies ? <p className="instructions">Click "New Game" to start over</p>:<p className="instructions">Roll until all dice are the same. 
-            Click each die to freeze it at its current value between rolls. </p>}           
+            Click each die to freeze it at its current value between rolls. Best score: {minScore} </p>}           
             <div className="dice-container">
                 {diceElements}
             </div>
